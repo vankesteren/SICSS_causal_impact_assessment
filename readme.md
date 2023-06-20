@@ -8,12 +8,12 @@ This webpage contains all the materials for a morning workshop on causal impact 
 
 How do we assess whether a school policy intervention has had the desired effect on student performance? How do we estimate the impact a natural disaster has had on the inhabitants of affected regions? How can we determine whether a change in the maximum speed on highways has lead to fewer accidents? These types of questions are at the core of many social scientific research problems. While questions with this structure are seemingly simple, their _causal effects_ are notoriously hard to estimate, because often we cannot perform a randomized controlled experiment. 
 
-In this course, we will deal with several advanced methods for answering such questions, with a dual focus:
+In this session, we will deal with several advanced methods for answering such questions, with a dual focus:
 
 - What are the causal assumptions underlying these methods?
 - How can we put these methods in practice?
 
-At the end of this workshop, participants have a firm grasp of the basics and limits of causal impact assessment, as well as the skills to start applying these methods in their own work.
+At the end of this session, participants have a firm grasp of the basics and limits of causal impact assessment, as well as the skills to start applying these methods in their own work.
 
 ## Prerequisites
 
@@ -27,27 +27,25 @@ We assume the following:
   - `sandwich`
   - `lmtest`
   - `tidysynth`
-  - `rdrobust`
-  - `fpp3`
   - `mice`
   - `CausalImpact`
 
   You can use the following code to install these at once:
   ```r
-  install.packages(c("tidyverse", "sandwich", "lmtest", "tidysynth", "rdrobust", "fpp3", "mice", "CausalImpact"))
+  install.packages(c("tidyverse", "sandwich", "lmtest", "tidysynth", "mice", "CausalImpact"))
   ```
-
 
 ## Workshop schedule & materials
 
 | Time  | Duration | Activity     | Content                            | link |
 | :---: | :------: | :----------- | :--------------------------------- | :--- |
-| 09:00 | 45       | Introduction | Introduction to causal inference   | [`intro.pdf`](./lectures/01_introduction/intro.pdf) |
-| 09:45 | 15       | Practical    | Setup + data intro                 | [`intro.html`](./practicals/01_introduction/intro.html) |
-| 10:00 | 15       | Break        |                                    |      |
-| 10:15 | 45       | Lecture      | Synthetic control                  | [`synthetic_control.pdf`](./lectures/03_synthetic_control/synthetic_control.pdf) |
-| 11:00 | 45       | Practical    | Synthetic control                  | [`synthetic_control.html`](./practicals/03_synthetic_control/synthetic_control.html) |
-| 11:45 | 15       | Closing      | Conclusion + open questions        |      |
+| 09:00 | 60       | Lecture      | Introduction & causal inference    | [`intro.pdf`](./lectures/01_introduction/intro.pdf) |
+| 10:00 | 30       | Practical    | Data + basic methods               | [`intro.html`](./practicals/01_introduction/intro.html) |
+| 10:15 | 15       | Break        |                                    |      |
+| 10:30 | 60       | Lecture      | Synthetic control                  | [`synthetic_control.pdf`](./lectures/03_synthetic_control/synthetic_control.pdf) |
+| 11:30 | 30       | Practical    | Synthetic control                  | [`synthetic_control.html`](./practicals/03_synthetic_control/synthetic_control.html) |
+| 12:00 | 60       | Lunch        |                                    |      |
+| 13:00 | 30       | Conclusion   | Conclusion + open questions        |      |
 
 You can download the dataset we have prepared from here: [`proposition99.rds`](./data/proposition99.rds). Save it in a nicely accessible place, we will be using it in every practical.
 
