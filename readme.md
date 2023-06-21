@@ -27,12 +27,10 @@ We assume the following:
   - `sandwich`
   - `lmtest`
   - `tidysynth`
-  - `mice`
-  - `CausalImpact`
 
   You can use the following code to install these at once:
   ```r
-  install.packages(c("tidyverse", "sandwich", "lmtest", "tidysynth", "mice", "CausalImpact"))
+  install.packages(c("tidyverse", "sandwich", "lmtest", "tidysynth"))
   ```
 
 ## Workshop schedule & materials
@@ -42,10 +40,10 @@ We assume the following:
 | 09:00 | 60       | Lecture      | Introduction & causal inference    | [`intro.pdf`](./lectures/01_introduction/intro.pdf) |
 | 10:00 | 30       | Practical    | Data + basic methods               | [`intro.html`](./practicals/01_introduction/intro.html) |
 | 10:15 | 15       | Break        |                                    |      |
-| 10:30 | 60       | Lecture      | Synthetic control                  | [`synthetic_control.pdf`](./lectures/03_synthetic_control/synthetic_control.pdf) |
-| 11:30 | 30       | Practical    | Synthetic control                  | [`synthetic_control.html`](./practicals/03_synthetic_control/synthetic_control.html) |
+| 10:30 | 60       | Lecture      | Synthetic control                  | [`synth.pdf`](./lectures/02_synth/synth.pdf) |
+| 11:30 | 30       | Practical    | Synthetic control                  | [`synth.html`](./practicals/02_synth/synth.html) |
 | 12:00 | 60       | Lunch        |                                    |      |
-| 13:00 | 30       | Conclusion   | Conclusion + open questions        |      |
+| 13:00 | 30       | Conclusion   | Conclusion + open questions        |  [`discussion.pdf`](./lectures/03_discussion/discussion.pdf)    |
 
 You can download the dataset we have prepared from here: [`proposition99.rds`](./data/proposition99.rds). Save it in a nicely accessible place, we will be using it in every practical.
 
