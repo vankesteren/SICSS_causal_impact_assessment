@@ -144,14 +144,14 @@ In the lecture, we did not correct the inference (p-value) for potential autocor
 
 ::: {.callout-note}
 ## Exercise 6
-Use `coeftest()` to correct the inference using heteroscedasticity and autocorrelation consistent (HAC) standard errors (pass the `vcovHAC` function from the `sandwich` package to the `.vcov` argument). Is the pre-post causal effect significantly different from 0?
+Use `coeftest()` to correct the inference using cluster-robust standard errors (pass the `vcovCL` function from the `sandwich` package to the `.vcov` argument and `~state` to the `cluster` argument). Is the pre-post causal effect significantly different from 0?
 
 ```{r}
 #| label: HAC-correct
-coeftest(fit_prepost, vcov. = vcovHAC)
+coeftest(fit_prepost, vcov. = vcovCL, cluster = ~state)
 
-# The standard error is a little bigger
-# (it is now 5.29 versus 4.34 before)
+# The standard error is a little different
+# (it is now 4.17 versus 4.34 before)
 # but the effect is still significant at 
 # the 5% level. (p < .001)
 ```
@@ -199,15 +199,14 @@ prop99_did <-
     state == "California" | state == "Nevada", 
     year > 1983, year < 1994
   ) |> 
-  mutate(prepost = factor(year > 1988, labels = c("Pre", "Post"))) |> 
-  filter()
+  mutate(prepost = factor(year > 1988, labels = c("Pre", "Post")))
 ```
 :::
 
 
 ::: {.callout-note}
 ## Exercise 8
-Now, estimate the causal effect using the difference-in-differences estimator. For this, use the formula `cigsale ~ state * prepost` in the `lm()` function. Investigate the estimated effect using HAC standard errors as before. How big is the causal effect of the policy intervention and is this effect significantly different from 0?
+Now, estimate the causal effect using the difference-in-differences estimator. For this, use the formula `cigsale ~ state * prepost` in the `lm()` function. Investigate the estimated effect using cluster-robust standard errors as before. How big is the causal effect of the policy intervention and is this effect significantly different from 0?
 ```{r}
 #| label: didestimate
 
@@ -218,11 +217,11 @@ fit_did <- lm(
 )
 
 # investigate the effect
-coeftest(fit_did, vcov. = vcovHAC)
+coeftest(fit_did, vcov. = vcovCL, cluster = ~state)
 
 # Using Nevada as a control,
 # the did causal effect is 5.68,
-# with a HAC s.e. of 5.42
+# with a cluster-robust s.e. of 8.0250
 # so this effect is not significantly
 # different from 0.
 ```
