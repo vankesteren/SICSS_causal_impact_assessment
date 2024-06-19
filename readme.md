@@ -40,10 +40,10 @@ We assume the following:
 | 09:00 | 60       | Lecture      | Introduction & causal inference    | [`intro.pdf`](./lectures/01_introduction/intro.pdf) |
 | 10:00 | 30       | Practical    | Data + basic methods               | [`intro.html`](./practicals/01_introduction/intro.html) |
 | 10:15 | 15       | Break        |                                    |      |
-| 10:30 | 60       | Lecture      | Synthetic control                  | [`synth.pdf`](./lectures/02_synth/synth.pdf) |
-| 11:30 | 30       | Practical    | Synthetic control                  | [`synth.html`](./practicals/02_synth/synth.html) |
+| 10:30 | 45       | Lecture      | Synthetic control                  | [`synth.pdf`](./lectures/02_synth/synth.pdf) |
+| 11:15 | 30       | Practical    | Synthetic control                  | [`synth.html`](./practicals/02_synth/synth.html) |
+| 11:45 | 60       | Conclusion   | Conclusion + open questions        | [`discussion.pdf`](./lectures/03_discussion/discussion.pdf)    |
 | 12:00 | 60       | Lunch        |                                    |      |
-| 13:00 | 30       | Conclusion   | Conclusion + open questions        |  [`discussion.pdf`](./lectures/03_discussion/discussion.pdf)    |
 
 You can download the dataset we have prepared from here: [`proposition99.rds`](./data/proposition99.rds). Save it in a nicely accessible place, we will be using it in every practical.
 
