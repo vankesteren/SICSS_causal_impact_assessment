@@ -26,11 +26,12 @@ We assume the following:
   - `tidyverse`
   - `sandwich`
   - `lmtest`
+  - `fpp3`
   - `tidysynth`
 
   You can use the following code to install these at once:
   ```r
-  install.packages(c("tidyverse", "sandwich", "lmtest", "tidysynth"))
+  install.packages(c("tidyverse", "sandwich", "lmtest", "fpp3", "tidysynth"))
   ```
 
 ## Workshop schedule & materials
@@ -38,14 +39,17 @@ We assume the following:
 | Time  | Duration | Activity     | Content                            | link |
 | :---: | :------: | :----------- | :--------------------------------- | :--- |
 | 09:00 | 60       | Lecture      | Introduction & causal inference    | [`intro.pdf`](./lectures/01_introduction/intro.pdf) |
-| 10:00 | 30       | Practical    | Data + basic methods               | [`intro.html`](./practicals/01_introduction/intro.html) |
-| 10:15 | 15       | Break        |                                    |      |
-| 10:30 | 45       | Lecture      | Synthetic control                  | [`synth.pdf`](./lectures/02_synth/synth.pdf) |
-| 11:15 | 30       | Practical    | Synthetic control                  | [`synth.html`](./practicals/02_synth/synth.html) |
-| 11:45 | 60       | Conclusion   | Conclusion + open questions        | [`discussion.pdf`](./lectures/03_discussion/discussion.pdf)    |
-| 12:00 | 60       | Lunch        |                                    |      |
+| 10:00 | 15       | Break        | Coffee                             |      |
+| 10:15 | 45       | Practical    | Data + basic methods               | [`intro.html`](./practicals/01_introduction/intro.html) |
+| 11:00 | 60       | Lecture      | Interrupted time series            | [`its.pdf`](./lectures/02_its/its.pdf)    |
+| 12:00 | 30       | Lunch        | Food                               |      |
+| 12:30 | 45       | Practical    | Interrupted time series            | [`its.html`](./practicals/02_its/its.html) |
+| 13:15 | 45       | Lecture      | Synthetic control                  | [`synth.pdf`](./lectures/03_synth/synth.pdf) |
+| 14:00 | 15       | Break        | Coffee                             |      |
+| 14:15 | 30       | Practical    | Synthetic control                  | [`synth.html`](./practicals/03_synth/synth.html) |
+| 14:45 | 15       | Conclusion   | Conclusion + open questions        | [`discussion.pdf`](./lectures/04_discussion/discussion.pdf)    |
 
-You can download the dataset we have prepared from here: [`proposition99.rds`](./data/proposition99.rds). Save it in a nicely accessible place, we will be using it in every practical.
+You can download the dataset we have prepared from here: [`proposition99.rds`](./data/proposition99.rds). In the first practical, you will save it in a nicely accessible place, as we will be using it in every subsequent practical.
 
 ## Additional links
 
@@ -58,10 +62,9 @@ You can download the dataset we have prepared from here: [`proposition99.rds`](.
 
 ## Contact
 
-This project is developed and maintained by the [ODISSEI Social Data
-Science (SoDa)](https://odissei-soda.nl/) team.
+This project is developed and maintained by the [ODISSEI Social Data Science (SoDa)](https://odissei-soda.nl/) team.
 
-<img src="img/soda_logo.png" alt="SoDa logo" width="250px"/>
+<img src="https://odissei-soda.nl/images/logos/soda_logo.svg" alt="SoDa logo" width="250px"/> 
 
 For questions about this course, you can contact us at [soda@odissei-data.nl](mailto:soda@odissei-data.nl), or you can contact the instructors Erik-Jan ([e.vankesteren1@uu.nl](mailto:e.vankesteren1@uu.nl)) or Oisín ([ryanoisin@gmail.com](mailto:ryanoisin@gmail.com)) directly.
 
