@@ -36,18 +36,20 @@ We assume the following:
 
 ## Workshop schedule & materials
 
+See the schedule below. Note that some of the practicals are interrupted by breaks or lunch. We aim to end by 15:00.
+
 | Time  | Duration | Activity     | Content                            | link |
 | :---: | :------: | :----------- | :--------------------------------- | :--- |
 | 09:00 | 60       | Lecture      | Introduction & causal inference    | [`intro.pdf`](./lectures/01_introduction/intro.pdf) |
 | 10:00 | 15       | Break        | Coffee                             |      |
 | 10:15 | 45       | Practical    | Data + basic methods               | [`intro.html`](./practicals/01_introduction/intro.html) |
-| 11:00 | 60       | Lecture      | Interrupted time series            | [`its.pdf`](./lectures/02_its/its.pdf)    |
+| 11:00 | 45       | Lecture      | Interrupted time series            | [`its.pdf`](./lectures/02_its/its.pdf)    |
+| 11:45 | 45       | Practical    | Interrupted time series            | [`its.html`](./practicals/02_its/its.html) |
 | 12:00 | 30       | Lunch        | Food                               |      |
-| 12:30 | 45       | Practical    | Interrupted time series            | [`its.html`](./practicals/02_its/its.html) |
-| 13:15 | 45       | Lecture      | Synthetic control                  | [`synth.pdf`](./lectures/03_synth/synth.pdf) |
+| 13:00 | 45       | Lecture      | Synthetic control                  | [`synth.pdf`](./lectures/03_synth/synth.pdf) |
+| 13:45 | 30       | Practical    | Synthetic control                  | [`synth.html`](./practicals/03_synth/synth.html) |
 | 14:00 | 15       | Break        | Coffee                             |      |
-| 14:15 | 30       | Practical    | Synthetic control                  | [`synth.html`](./practicals/03_synth/synth.html) |
-| 14:45 | 15       | Conclusion   | Conclusion + open questions        | [`discussion.pdf`](./lectures/04_discussion/discussion.pdf)    |
+| 14:30 | 30       | Conclusion   | Conclusion + open questions        | [`discussion.pdf`](./lectures/04_discussion/discussion.pdf)    |
 
 You can download the dataset we have prepared from here: [`proposition99.rds`](./data/proposition99.rds). In the first practical, you will save it in a nicely accessible place, as we will be using it in every subsequent practical.
 

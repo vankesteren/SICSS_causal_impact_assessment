@@ -123,9 +123,6 @@ Fit an `ARIMA()` model using only the pre-intervention cigarette sales data in C
 fit_arima <-  
   prop99_ts |> 
   filter(prepost == "Pre") |> 
-  # here we use the corrected AIC to do model selection
-  # many other methods of model selection are also 
-  # possible (e.g. cross-validation)
   model(timeseries = ARIMA(cigsale, ic = "aicc")) 
 
 # create forecasts
@@ -197,19 +194,32 @@ summary(fit_rdd)
 # after the intervention
 
 # You can also visualize your RDD model using the below code
-pred_df |> 
-  ggplot(aes(x = year, y = cigsale)) +
-  geom_ribbon(aes(ymin = lwr, ymax = upr), alpha = 0.2, 
-              data = pred_df |> filter(prepost == "Pre")) +
-  geom_line(aes(y = fit), data = pred_df |> filter(prepost == "Pre")) +
-  geom_ribbon(aes(ymin = lwr, ymax = upr), alpha = 0.2, 
-              data = pred_df |> filter(prepost == "Post")) +
-  geom_line(aes(y = fit), data = pred_df |> filter(prepost == "Post")) +
+pred_df <- prop99_ts |> bind_cols(predict(fit_rdd, interval = "prediction"))
+pred_df |>
+  ggplot(mapping = aes(x = year, y = cigsale)) +
+  geom_ribbon(
+    mapping = aes(ymin = lwr, ymax = upr),
+    alpha = 0.2,
+    data = pred_df |> filter(prepost == "Pre")
+  ) +
+  geom_line(
+    mapping = aes(y = fit), 
+    data = pred_df |> filter(prepost == "Pre")
+  ) +
+  geom_ribbon(
+    mapping = aes(ymin = lwr, ymax = upr),
+    alpha = 0.2,
+    data = pred_df |> filter(prepost == "Post")
+  ) +
+  geom_line(
+    mapping = aes(y = fit), 
+    data = pred_df |> filter(prepost == "Post")
+  ) +
   geom_line(linewidth = 1, color = "darkgreen") +
   ylim(0, 150) +
-  theme_minimal() + 
-  geom_vline(xintercept = 1988, linetype = 2) +
-  annotate("label", x = 1988, y = 150, label = "Intervention")
+  theme_minimal() +
+  geom_vline(xintercept = 1988.5, linetype = 2) +
+  annotate("label", x = 1988.5, y = 150, label = "Intervention")
 ```
 
 :::
