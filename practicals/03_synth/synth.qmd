@@ -259,7 +259,7 @@ ce_data |>
 
 ## Robustness checks for units and variables
 
-As mentioned in the lecture, this whole procedure hinges on a lot of choices. Through a robustness check (or sensitivity analysis) you can find out if your conclusions would have been differen if you had made a different choice somewhere in the study.
+As mentioned in the lecture, this whole procedure hinges on a lot of choices. Through a robustness check (or sensitivity analysis) you can find out if your conclusions would have been different if you had made a different choice somewhere in the study.
 
 ::: {.callout-note}
 ## Exercise 9
