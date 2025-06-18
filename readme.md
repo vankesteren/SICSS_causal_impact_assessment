@@ -1,6 +1,6 @@
 
 # SICSS: estimating causal effects of policy interventions
-This webpage contains all the materials for a morning workshop on causal impact assessment. The materials on this website are [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
+This webpage contains all the materials for a workshop on causal impact assessment. The materials on this website are [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
 
 ![cc](https://mirrors.creativecommons.org/presskit/icons/cc.svg) ![by](https://mirrors.creativecommons.org/presskit/icons/by.svg)
 
